@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cdcsu1q5ir0mw"]
+
+[ext_resource type="Script" uid="uid://cfpckc42btm60" path="res://Scripts/basura.gd" id="1_3uta6"]
+[ext_resource type="Texture2D" uid="uid://d3puqeck0fcjv" path="res://escenas/basura/SPRITES basura 1-05.png" id="2_ohst7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwla3"]
+atlas = ExtResource("2_ohst7")
+region = Rect2(768, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwbu8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwla3")
+}],
+"loop": 1,
+"name": &"default_16",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwbu8"]
+size = Vector2(111.484375, 128)
+
+[node name="Basura" type="StaticBody2D" unique_id=1518748250]
+script = ExtResource("1_3uta6")
+metadata/_tc_uuid = "8165113298784019788"
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1969347891]
+position = Vector2(3.0000038, 6.0000005)
+scale = Vector2(0.922, 1)
+sprite_frames = SubResource("SpriteFrames_fwbu8")
+animation = &"default_16"
+autoplay = "default_16"
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "2407199569965464394"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=18936557]
+shape = SubResource("RectangleShape2D_fwbu8")
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "3540721065470684332"
+
+[node name="ZonaInteraccion" type="Area2D" parent="." unique_id=2065201260]
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "1984769258228131863"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaInteraccion" unique_id=704549009]
+shape = SubResource("RectangleShape2D_fwbu8")
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "3540721065470684332"

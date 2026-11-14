@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://duwln7fft25pr" path="res://Sprites/Suelo nave-02.png" id="1_yrieu"]
 [ext_resource type="PackedScene" uid="uid://dph6cc54ev6sw" path="res://escenas/Jugador.tscn" id="2_dfl8l"]
+[ext_resource type="PackedScene" uid="uid://du034iihyng7t" path="res://escenas/basura/basura.tscn" id="3_c577p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nf7ox"]
 texture = ExtResource("1_yrieu")
@@ -344,6 +345,10 @@ tile_map_data = PackedByteArray("AABAACIAAAAAAAAAAABAACMAAAAAAAEAAABAACQAAAAAAAI
 tile_set = SubResource("TileSet_e647d")
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "2836853374443699540"
+
+[node name="Area2D" parent="." unique_id=1460709756 instance=ExtResource("3_c577p")]
+position = Vector2(140, 108)
+metadata/_tc_offline_added = true
 
 [node name="CharacterBody2D" parent="." unique_id=904131339 instance=ExtResource("2_dfl8l")]
 position = Vector2(534, 324)

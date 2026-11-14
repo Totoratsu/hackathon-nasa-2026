@@ -144,7 +144,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u4hh2"]
-size = Vector2(55, 16)
+size = Vector2(55, 36)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=904131339]
 script = ExtResource("1_rk7g7")
@@ -152,13 +152,13 @@ metadata/_tc_uuid = "7724877890620579781"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1295916500]
 sprite_frames = SubResource("SpriteFrames_fwbu8")
-animation = &"Arriba"
+animation = &"Abajo"
 autoplay = "Idle"
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "7532424834006032454"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1801916196]
-position = Vector2(3.5, 55)
+position = Vector2(3.5, 45)
 shape = SubResource("RectangleShape2D_u4hh2")
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "3794389184768591199"
