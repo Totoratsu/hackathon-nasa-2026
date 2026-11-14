@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dph6cc54ev6sw" path="res://escenas/Jugador.tscn" id="5_nb4lc"]
 [ext_resource type="Texture2D" uid="uid://b4rddqptw1qhq" path="res://Sprites/elementos 13-01.png" id="5_xjvse"]
 [ext_resource type="PackedScene" uid="uid://belhqcd41segt" path="res://escenas/ui_usuario.tscn" id="6_l2lj0"]
+[ext_resource type="PackedScene" uid="uid://bys5oqsi316vy" path="res://escenas/Configuracion.tscn" id="9_cfg01"]
+[ext_resource type="PackedScene" uid="uid://lqi2irk5km8p" path="res://escenas/Misiones.tscn" id="10_mis01"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfnt6"]
 texture = ExtResource("3_622j6")
@@ -2763,3 +2765,7 @@ offset_top = 133.0
 offset_right = 1260.0
 offset_bottom = 171.0
 metadata/_tc_offline_added = true
+
+[node name="Configuracion" parent="Ui" instance=ExtResource("9_cfg01")]
+
+[node name="Misiones" parent="Ui" instance=ExtResource("10_mis01")]
