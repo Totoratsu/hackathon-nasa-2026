@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://i12at8dfbpc3"]
 
 [ext_resource type="Script" uid="uid://c67rdj2qmb5xn" path="res://Scripts/Coin 2d.gd" id="1_647lq"]
-[ext_resource type="Texture2D" uid="uid://df1icyyad3wi0" path="res://images-removebg-preview.png" id="1_anlur"]
+[ext_resource type="Texture2D" uid="uid://df1icyyad3wi0" path="res://Sprites/images-removebg-preview.png" id="1_anlur"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fwbu8"]
 radius = 24.020824

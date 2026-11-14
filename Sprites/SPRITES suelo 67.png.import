@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtr45t5eytbuw"
-path="res://.godot/imported/SPRITES suelo 67.png-ea4a7a2aa51caf746b42ecbd81c045ba.ctex"
+uid="uid://comrgb87m8x2h"
+path="res://.godot/imported/SPRITES suelo 67.png-591693e387a2927da4907fb2a6508249.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/SPRITES suelo 67.png"
-dest_files=["res://.godot/imported/SPRITES suelo 67.png-ea4a7a2aa51caf746b42ecbd81c045ba.ctex"]
+source_file="res://SPRITES suelo 67.png"
+dest_files=["res://.godot/imported/SPRITES suelo 67.png-591693e387a2927da4907fb2a6508249.ctex"]
 
 [params]
 

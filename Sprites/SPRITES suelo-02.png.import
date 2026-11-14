@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbo08v7wwydh7"
-path="res://.godot/imported/Sprite NOVA-01.png-0abc0cd056a7183d3842986cba4009ba.ctex"
+uid="uid://d1pwltqse3ml3"
+path="res://.godot/imported/SPRITES suelo-02.png-23929684cf8ab476a472524d1c29ae4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite NOVA-01.png"
-dest_files=["res://.godot/imported/Sprite NOVA-01.png-0abc0cd056a7183d3842986cba4009ba.ctex"]
+source_file="res://Sprites/SPRITES suelo-02.png"
+dest_files=["res://.godot/imported/SPRITES suelo-02.png-23929684cf8ab476a472524d1c29ae4c.ctex"]
 
 [params]
 

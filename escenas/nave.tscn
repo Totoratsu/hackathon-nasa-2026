@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://da1kos5gg0kny"]
 
-[ext_resource type="Texture2D" uid="uid://duwln7fft25pr" path="res://Sprites/Suelo nave-02.png" id="1_1av66"]
-[ext_resource type="PackedScene" uid="uid://dph6cc54ev6sw" path="res://Sprites/Jugador.tscn" id="2_bqrxe"]
+[ext_resource type="Texture2D" uid="uid://duwln7fft25pr" path="res://Sprites/Suelo nave-02.png" id="1_yrieu"]
+[ext_resource type="PackedScene" uid="uid://dph6cc54ev6sw" path="res://escenas/Jugador.tscn" id="2_dfl8l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nf7ox"]
-texture = ExtResource("1_1av66")
+texture = ExtResource("1_yrieu")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -70,7 +70,7 @@ texture = ExtResource("1_1av66")
 7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4s8aw"]
-texture = ExtResource("1_1av66")
+texture = ExtResource("1_yrieu")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -136,7 +136,7 @@ texture = ExtResource("1_1av66")
 7:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_endk3"]
-texture = ExtResource("1_1av66")
+texture = ExtResource("1_yrieu")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -203,7 +203,7 @@ texture = ExtResource("1_1av66")
 7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_reu86"]
-texture = ExtResource("1_1av66")
+texture = ExtResource("1_yrieu")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -270,7 +270,7 @@ texture = ExtResource("1_1av66")
 7:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bqrxe"]
-texture = ExtResource("1_1av66")
+texture = ExtResource("1_yrieu")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -345,6 +345,6 @@ tile_set = SubResource("TileSet_e647d")
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "2836853374443699540"
 
-[node name="CharacterBody2D" parent="." unique_id=904131339 instance=ExtResource("2_bqrxe")]
+[node name="CharacterBody2D" parent="." unique_id=904131339 instance=ExtResource("2_dfl8l")]
 position = Vector2(534, 324)
 metadata/_tc_offline_added = true
