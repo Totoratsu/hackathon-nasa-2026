@@ -4,7 +4,7 @@
 font_size = 46
 font_color = Color(0.30777752, 0.112517156, 0.0011473168, 1)
 
-[node name="Control" type="Control" unique_id=1894639479]
+[node name="Control2" type="Control" unique_id=1894639479]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
