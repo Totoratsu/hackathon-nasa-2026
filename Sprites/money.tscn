@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://i12at8dfbpc3"]
+
+[ext_resource type="Script" uid="uid://c67rdj2qmb5xn" path="res://Scripts/Coin 2d.gd" id="1_647lq"]
+[ext_resource type="Texture2D" uid="uid://df1icyyad3wi0" path="res://images-removebg-preview.png" id="1_anlur"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fwbu8"]
+radius = 24.020824
+
+[node name="Area2D" type="Area2D" unique_id=1569489394]
+script = ExtResource("1_647lq")
+metadata/_tc_uuid = "4829250663455982352"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=927333909]
+position = Vector2(-17, -13.000001)
+scale = Vector2(0.39847717, 0.37203792)
+texture = ExtResource("1_anlur")
+hframes = 3
+vframes = 2
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "4428695218211352469"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1715980750]
+position = Vector2(1.9073486e-06, 9.536743e-07)
+shape = SubResource("CircleShape2D_fwbu8")
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "315686312056801459"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
