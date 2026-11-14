@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://lqi2irk5km8p"]
+
+[ext_resource type="Script" uid="uid://c7qujm5i7odye" path="res://Scripts/misiones.gd" id="1_73821"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_73821"]
+font_size = 40
+font_color = Color(0.97154075, 0, 0.12360398, 1)
+
+[node name="Control" type="Control" unique_id=1340639622]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_force_pass_scroll_events = false
+script = ExtResource("1_73821")
+metadata/_tc_uuid = "869121451356716803"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=517670959]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "5501427529473262954"
+
+[node name="Configuracion_button" type="Button" parent="VBoxContainer" unique_id=552112744]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+button_mask = 0
+text = "Misiones"
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "4926074656766081957"
+
+[node name="Panel_misiones" type="ColorRect" parent="." unique_id=1684053842]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "4774993753605022824"
+
+[node name="CerrarButton" type="Button" parent="Panel_misiones" unique_id=136920156]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "x"
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "4784721579363867581"
+
+[node name="Control" type="Control" parent="Panel_misiones" unique_id=1618705543]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "4437371824083116645"
+
+[node name="Label" type="Label" parent="Panel_misiones/Control" unique_id=1577794320]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 20.0
+offset_right = 432.0
+offset_bottom = 75.0
+text = "Comandante: Mision"
+label_settings = SubResource("LabelSettings_73821")
+vertical_alignment = 1
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "1246629554264481202"
+
+[node name="Button" type="Button" parent="Panel_misiones/Control" unique_id=1086287380]
+custom_minimum_size = Vector2(0, -200)
+custom_maximum_size = Vector2(200, -1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.0
+anchor_top = 0.037
+anchor_right = 2.0
+anchor_bottom = 0.225
+offset_left = 455.0
+offset_top = 13.52
+offset_right = 655.0
+offset_bottom = 44.52
+text = "button"
+metadata/_tc_offline_added = true
+metadata/_tc_uuid = "8929952715141646224"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6tp2syf3jb43" path="res://Scripts/nivel.gd" id="1_fbp1e"]
 [ext_resource type="PackedScene" uid="uid://i12at8dfbpc3" path="res://escenas/money.tscn" id="2_yixaf"]
-[ext_resource type="Texture2D" uid="uid://dtr45t5eytbuw" path="res://Sprites/SPRITES suelo 67.png" id="3_622j6"]
+[ext_resource type="Texture2D" uid="uid://comrgb87m8x2h" path="res://Sprites/SPRITES suelo 67.png" id="3_622j6"]
 [ext_resource type="Texture2D" uid="uid://d1pwltqse3ml3" path="res://Sprites/SPRITES suelo-02.png" id="4_0ppkb"]
 [ext_resource type="PackedScene" uid="uid://dph6cc54ev6sw" path="res://escenas/Jugador.tscn" id="5_nb4lc"]
 [ext_resource type="PackedScene" uid="uid://belhqcd41segt" path="res://escenas/ui_usuario.tscn" id="6_l2lj0"]
