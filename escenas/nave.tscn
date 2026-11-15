@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dph6cc54ev6sw" path="res://escenas/Jugador.tscn" id="2_dfl8l"]
 [ext_resource type="Texture2D" uid="uid://butjl7s3k6lhp" path="res://Sprites/SPRITES estacion-03-03.png" id="2_iaarx"]
 [ext_resource type="PackedScene" uid="uid://dc0f1l2sedle3" path="res://Scripts/puerta.tscn" id="5_3gjn0"]
+[ext_resource type="PackedScene" uid="uid://lqi2irk5km8p" path="res://escenas/Misiones.tscn" id="7_43iks"]
 [ext_resource type="PackedScene" uid="uid://bs8yn0158yw04" path="res://escenas/Perro robótico.tscn" id="8_0g7gu"]
 [ext_resource type="PackedScene" uid="uid://dyrpolvmkvcnc" path="res://escenas/mesa_investigacion.tscn" id="14_mesa1"]
 [ext_resource type="PackedScene" uid="uid://belhqcd41segt" path="res://escenas/ui_usuario.tscn" id="15_ui01"]
@@ -1237,6 +1238,12 @@ offset_left = 848.0
 offset_top = 133.0
 offset_right = 1260.0
 offset_bottom = 171.0
+
+[node name="Misiones" parent="Ui" unique_id=1340639622 instance=ExtResource("7_43iks")]
+offset_left = 23.0
+offset_top = 3.0
+offset_right = 23.0
+offset_bottom = 3.0
 
 [node name="Contador_basura" type="Label" parent="Ui" unique_id=1894639481]
 offset_left = 943.0
