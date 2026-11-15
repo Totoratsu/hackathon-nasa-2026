@@ -62,7 +62,8 @@ func _ready() -> void:
 
 # Una frase al azar de ARCHIVO_FRASES (una por linea); no pisa un mensaje que se este mostrando.
 func _frase_del_perro() -> void:
-	if caja_dialogo._panel.visible:
+	# Solo habla durante el juego: sin jugador en la escena (game over, menu) calla.
+	if get_tree().get_first_node_in_group("player") == null or caja_dialogo._panel.visible:
 		return
 	var frases := Array(FileAccess.get_file_as_string(ARCHIVO_FRASES).split("
 ")).map(func(f): return f.strip_edges()).filter(func(f): return not f.is_empty())
