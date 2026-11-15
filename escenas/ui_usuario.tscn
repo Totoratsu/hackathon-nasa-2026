@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://belhqcd41segt"]
 
 [ext_resource type="Script" path="res://Scripts/ui_usuario.gd" id="1_uiusr"]
+[ext_resource type="Texture2D" uid="uid://df1icyyad3wi0" path="res://Sprites/images-removebg-preview.png" id="2_moneda"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3w5bs"]
 font_size = 46
 font_color = Color(0.30777752, 0.112517156, 0.0011473168, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_moneda"]
+atlas = ExtResource("2_moneda")
+region = Rect2(78, 78, 125, 125)
 
 [node name="Control2" type="Control" unique_id=1894639479]
 layout_mode = 3
@@ -39,10 +44,22 @@ offset_transform_enabled = true
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "3309045444757814592"
 
-[node name="dinero_label" type="Label" parent="VBoxContainer" unique_id=106466317]
+[node name="Fila" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Moneda" type="TextureRect" parent="VBoxContainer/Fila"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_moneda")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="dinero_label" type="Label" parent="VBoxContainer/Fila" unique_id=106466317]
 layout_mode = 2
 offset_transform_enabled = true
-text = "Dinero: 0"
+text = "0"
 label_settings = SubResource("LabelSettings_3w5bs")
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "1265407497685109465"
