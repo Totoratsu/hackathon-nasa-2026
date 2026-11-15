@@ -1,4 +1,3 @@
-
 extends CharacterBody2D
 
 @onready var barra_oxigeno: TextureProgressBar = $CanvasLayer/TextureProgressBar
@@ -7,6 +6,7 @@ extends CharacterBody2D
 
 @export var max_oxigeno: float = 100.0
 @export var consumo_por_segundo: float = 5.0
+@export var consume_oxigeno: bool = false
 
 var oxigeno_actual: float = 100.0
 const velocidad = 350
@@ -28,7 +28,7 @@ func _ready():
 
 
 func _process(delta: float):
-	if traje:
+	if traje and consume_oxigeno:
 		disminuir_oxigeno(delta)
 		barra_oxigeno.value = oxigeno_actual
 

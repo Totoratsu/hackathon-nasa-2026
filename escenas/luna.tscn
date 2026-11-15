@@ -3717,6 +3717,7 @@ metadata/_tc_uuid = "3769991461158792493"
 
 [node name="player" parent="." unique_id=904131339 instance=ExtResource("5_nb4lc")]
 position = Vector2(237, 105)
+consume_oxigeno = true
 metadata/_tc_offline_added = true
 
 [node name="Ui" type="CanvasLayer" parent="." unique_id=1477804253]
