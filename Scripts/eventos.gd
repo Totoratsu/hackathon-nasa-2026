@@ -31,8 +31,13 @@ var clima: Clima = Clima.NORMAL
 var mejora: int = SIN_MEJORA
 var timer_mejora := Timer.new()
 var oxigeno_mejorado := false  # mejora permanente, se compra una sola vez
+const CajaDialogo := preload("res://Scripts/caja_dialogo.gd")
+var caja_dialogo: CanvasLayer
 
 func _ready() -> void:
+	# La caja de dialogo vive en el autoload: sirve en cualquier escena.
+	caja_dialogo = CajaDialogo.new()
+	add_child(caja_dialogo)
 	mesa_investigacion.connect(func(disponible: bool): mesa_disponible = disponible)
 	# Los timers viven en el autoload, asi siguen corriendo al cambiar de escena.
 	var timer_clima := Timer.new()
@@ -71,7 +76,7 @@ func _cambiar_clima() -> void:
 
 func comprar_mejora(tipo: Clima) -> void:
 	if dinero < PRECIO_MEJORA:
-		print("No te alcanza: necesitas ", PRECIO_MEJORA)
+		decir("No te alcanza el dinero. Esta mejora cuesta %d." % PRECIO_MEJORA)
 		return
 	sumar_dinero(-PRECIO_MEJORA)
 	mejora = tipo                        # reemplaza la anterior
@@ -89,11 +94,16 @@ func puede_salir() -> bool:
 
 func comprar_oxigeno() -> void:
 	if oxigeno_mejorado:
-		print("Ya tienes la mejora de oxigeno")
+		decir("Ya tienes la mejora de oxígeno.")
 		return
 	if dinero < PRECIO_OXIGENO:
-		print("No te alcanza: necesitas ", PRECIO_OXIGENO)
+		decir("No te alcanza el dinero. La mejora de oxígeno cuesta %d." % PRECIO_OXIGENO)
 		return
 	sumar_dinero(-PRECIO_OXIGENO)
 	oxigeno_mejorado = true
 	print("Mejora de oxigeno comprada: el oxigeno dura x", FACTOR_OXIGENO, ". Dinero restante: ", dinero)
+
+# Muestra un mensaje en la caja de dialogo (y lo deja en la consola).
+func decir(texto: String) -> void:
+	print(texto)
+	caja_dialogo.mostrar(texto)
