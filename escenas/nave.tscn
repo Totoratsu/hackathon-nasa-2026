@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://butjl7s3k6lhp" path="res://Sprites/SPRITES estacion-03-03.png" id="2_iaarx"]
 [ext_resource type="PackedScene" uid="uid://dc0f1l2sedle3" path="res://Scripts/puerta.tscn" id="5_3gjn0"]
 [ext_resource type="PackedScene" uid="uid://bs8yn0158yw04" path="res://escenas/Perro robótico.tscn" id="8_0g7gu"]
+[ext_resource type="AudioStream" uid="uid://xk50xg1kgsaa" path="res://canciones/hub.mp3" id="11_pf1us"]
 [ext_resource type="PackedScene" uid="uid://dyrpolvmkvcnc" path="res://escenas/mesa_investigacion.tscn" id="14_mesa1"]
 [ext_resource type="PackedScene" uid="uid://belhqcd41segt" path="res://escenas/ui_usuario.tscn" id="15_ui01"]
 [ext_resource type="Script" uid="uid://b4ykl06x1pf7g" path="res://Scripts/contador_basura.gd" id="16_cont"]
@@ -1255,3 +1256,8 @@ script = ExtResource("16_cont")
 
 [node name="Node2D" parent="." unique_id=363928282 instance=ExtResource("8_0g7gu")]
 position = Vector2(717, 392)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1012275774]
+stream = ExtResource("11_pf1us")
+autoplay = true
+parameters/looping = false

@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://chq2jnu51ay3c" path="res://escenas/basura/basura4.tscn" id="16_hn86v"]
 [ext_resource type="PackedScene" uid="uid://du034iihyng7t" path="res://escenas/basura/basura.tscn" id="17_dho5l"]
 [ext_resource type="PackedScene" uid="uid://bs8yn0158yw04" path="res://escenas/Perro robótico.tscn" id="17_ukwdo"]
+[ext_resource type="AudioStream" uid="uid://cp05ytn6xxml3" path="res://canciones/space-mission.mp3" id="18_i6mv6"]
 [ext_resource type="Script" uid="uid://b4ykl06x1pf7g" path="res://Scripts/contador_basura.gd" id="99_cont"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfnt6"]
@@ -3740,8 +3741,8 @@ offset_top = 56.0
 offset_right = -19.0
 offset_bottom = 102.0
 grow_horizontal = 0
-horizontal_alignment = 1
 theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
 script = ExtResource("99_cont")
 metadata/_tc_offline_added = true
 
@@ -3751,3 +3752,7 @@ escena_destino = "uid://da1kos5gg0kny"
 
 [node name="Node2D" parent="." unique_id=363928282 instance=ExtResource("17_ukwdo")]
 position = Vector2(-272, 74)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=96243339]
+stream = ExtResource("18_i6mv6")
+autoplay = true
