@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://d3xhir3jbuc4e" path="res://Scripts/player.gd" id="1_rk7g7"]
 [ext_resource type="Texture2D" uid="uid://bbo08v7wwydh7" path="res://Sprites/Sprite NOVA-01.png" id="2_5bp30"]
 [ext_resource type="Texture2D" uid="uid://c60fjv3dps82m" path="res://Sprites/SPRITES astronauta-04.png" id="3_5bp30"]
+[ext_resource type="Texture2D" uid="uid://b2kic4mdyhdxj" path="res://Sprites/Barra de oxigeno.png" id="4_s1vfj"]
+[ext_resource type="Texture2D" uid="uid://fj3sqn4xk1jf" path="res://Sprites/relleno barra.png" id="5_eexci"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k55ed"]
 atlas = ExtResource("2_5bp30")
@@ -285,6 +287,7 @@ animations = [{
 size = Vector2(59, 36)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=904131339]
+position = Vector2(580, 323)
 script = ExtResource("1_rk7g7")
 metadata/_tc_uuid = "7724877890620579781"
 
@@ -300,6 +303,21 @@ position = Vector2(1.5, 45)
 shape = SubResource("RectangleShape2D_u4hh2")
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "3794389184768591199"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=621128811]
+layer = 10
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1172959751]
+offset_left = 896.0
+offset_top = 68.0
+offset_right = 1144.0
+offset_bottom = 111.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_over = ExtResource("4_s1vfj")
+texture_progress = ExtResource("5_eexci")
+texture_progress_offset = Vector2(10, 15)
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2082787427]
 metadata/_tc_offline_added = true
