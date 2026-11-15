@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://duwln7fft25pr" path="res://Sprites/Suelo nave-02.png" id="1_yrieu"]
 [ext_resource type="PackedScene" uid="uid://dph6cc54ev6sw" path="res://escenas/Jugador.tscn" id="2_dfl8l"]
 [ext_resource type="Texture2D" uid="uid://butjl7s3k6lhp" path="res://Sprites/SPRITES estacion-03-03.png" id="2_iaarx"]
-[ext_resource type="PackedScene" uid="uid://du034iihyng7t" path="res://escenas/basura/basura.tscn" id="3_c577p"]
 [ext_resource type="PackedScene" uid="uid://dc0f1l2sedle3" path="res://Scripts/puerta.tscn" id="5_3gjn0"]
 [ext_resource type="PackedScene" uid="uid://belhqcd41segt" path="res://escenas/ui_usuario.tscn" id="15_ui01"]
 [ext_resource type="Script" path="res://Scripts/contador_basura.gd" id="16_cont"]
@@ -964,21 +963,17 @@ tile_set = SubResource("TileSet_e647d")
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "2836853374443699540"
 
-[node name="Area2D" parent="." unique_id=1460709756 instance=ExtResource("3_c577p")]
-position = Vector2(140, 108)
-metadata/_tc_offline_added = true
+[node name="mesa_investigacion" parent="." unique_id=1988492571 instance=ExtResource("14_mesa1")]
+position = Vector2(222, 151)
+
+[node name="Area2D2" parent="." unique_id=781094645 instance=ExtResource("5_3gjn0")]
+position = Vector2(599, 64)
+escena_destino = "uid://bwck3sjslr82j"
+revisar_clima = true
 
 [node name="CharacterBody2D" parent="." unique_id=904131339 instance=ExtResource("2_dfl8l")]
 position = Vector2(534, 324)
 metadata/_tc_offline_added = true
-
-[node name="Area2D2" parent="." unique_id=781094645 instance=ExtResource("5_3gjn0")]
-position = Vector2(599, 64)
-escena = "res://escenas/luna.tscn"
-revisar_traje = true
-
-[node name="mesa_investigacion" parent="." unique_id=1988492571 instance=ExtResource("14_mesa1")]
-position = Vector2(300, 250)
 
 [node name="Ui" type="CanvasLayer" parent="." unique_id=1477804254]
 

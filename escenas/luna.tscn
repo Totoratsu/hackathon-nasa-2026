@@ -3557,7 +3557,7 @@ metadata/_tc_offline_added = true
 
 [node name="Area2D" parent="." unique_id=781094645 instance=ExtResource("11_vye1e")]
 position = Vector2(-971, -115)
-escena = "res://escenas/nave.tscn"
+escena_destino = "uid://da1kos5gg0kny"
 
 [node name="Basura" parent="." unique_id=1518748250 instance=ExtResource("14_ukwdo")]
 position = Vector2(835, 325)

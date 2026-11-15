@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dc0f1l2sedle3"]
 
-[ext_resource type="Script" uid="uid://by6y5ncjm8lxf" path="res://puerta.gd" id="1_ujhq7"]
+[ext_resource type="Script" uid="uid://by6y5ncjm8lxf" path="res://Scripts/Portal.gd" id="1_ujhq7"]
 [ext_resource type="Texture2D" uid="uid://b4rddqptw1qhq" path="res://Sprites/elementos 13-01.png" id="2_rmro0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lq0e6"]
