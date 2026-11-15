@@ -19,7 +19,7 @@ func _ready() -> void:
 		pantalla.get_node("Label").text = texto.replace("\\n", "\n")
 		raiz.add_child.call_deferred(pantalla) # raiz aun esta montando sus hijos
 		var boton := Button.new()
-		boton.text = "Mision %d" % n
+		boton.text = "Misión %d" % n
 		boton.custom_minimum_size = Vector2(300, 52)
 		boton.add_theme_font_size_override("font_size", 24)
 		boton.pressed.connect(pantalla.show)
@@ -40,4 +40,4 @@ func _actualizar() -> void:
 	for i in get_child_count():
 		var boton: Button = get_child(i)
 		boton.disabled = i > Eventos.misiones_completadas
-		boton.text = "Mision %d" % (i + 1) + (" (lista)" if i < Eventos.misiones_completadas else "")
+		boton.text = "Misión %d" % (i + 1) + (" (lista)" if i < Eventos.misiones_completadas else "")

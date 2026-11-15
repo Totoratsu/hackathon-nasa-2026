@@ -43,7 +43,7 @@ offset_bottom = 450.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.70371276, 0, 0.006924956, 1)
 theme_override_font_sizes/font_size = 80
-text = "GAME OVER"
+text = "FIN DEL JUEGO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -67,7 +67,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
-text = "PLAY"
+text = "JUGAR"
 
 [node name="exit" type="Button" parent="." unique_id=1892215416]
 layout_mode = 0
@@ -86,7 +86,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
-text = "EXIT"
+text = "SALIR"
 
 [node name="SpriteGameOver" type="Sprite2D" parent="." unique_id=61826857]
 position = Vector2(734, 187)

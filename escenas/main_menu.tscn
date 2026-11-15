@@ -57,7 +57,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
-text = "PLAY"
+text = "JUGAR"
 metadata/_tc_uuid = "1010403786680646100"
 
 [node name="exit" type="Button" parent="BoxContainer" unique_id=1892215416]
@@ -72,7 +72,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
-text = "EXIT"
+text = "SALIR"
 metadata/_tc_uuid = "7050728053229015082"
 
 [node name="Logo" type="TextureRect" parent="." unique_id=35307034]

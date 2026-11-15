@@ -1,3 +1,3 @@
 Misión 1: Recolecta basura espacial\n1. Dirígete hacia la salida, ponte tu casco y sal al exterior.\n2. Recolecta la mayor cantidad de basura espacial que puedas.\n3. Se te está agotando el oxígeno, vuelve a la nave ya.\n4. Entra y dirígete hacia el laboratorio\n5. Examina la basura en el menú de investigación
-Mision 2: Mejora para temperatura
-Mision 3: Mejora para oxígeno
+Misión 2: Mejora para temperatura
+Misión 3: Mejora para oxígeno

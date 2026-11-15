@@ -13,6 +13,8 @@ extends Node2D
 
 var _posiciones_suelo: PackedVector2Array = []
 
+static var aviso_basura_dado := false  # static: sobrevive al cambiar de escena
+
 func _ready():
 	# En la luna el traje es obligatorio (cambio de LeJuanChis en 92f9d51).
 	# Diferido: este _ready corre antes que el del jugador (esta antes en el arbol),
@@ -21,6 +23,9 @@ func _ready():
 		player.activar_traje_obligatorio.call_deferred()
 	else:
 		print("ERROR: No se encontró al jugador en Luna")
+	if not aviso_basura_dado: # solo la primera vez que entras a la luna
+		aviso_basura_dado = true
+		Eventos.decir.call_deferred("Recuerda recoger la basura con B.")
 	_calcular_suelo()
 	var timer := Timer.new()
 	timer.wait_time = intervalo
