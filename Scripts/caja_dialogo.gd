@@ -26,6 +26,7 @@ var _label: Label
 var _texto := ""                 # mensaje sin la flecha
 var _tween: Tween
 var _escribiendo := false
+var _prioritario := false         # un mensaje prioritario no lo pisa uno normal
 var _espera := 0.0               # segundos que faltan para cerrar sola
 
 func _ready() -> void:
@@ -93,9 +94,12 @@ func _frame_perro(columna: int) -> AtlasTexture:
 	atlas.region = Rect2(columna * CELDA_PERRO, CELDA_PERRO, CELDA_PERRO, CELDA_PERRO)
 	return atlas
 
-func mostrar(texto: String, segundos_visible := 4.0) -> void:
+func mostrar(texto: String, segundos_visible := 4.0, prioritario := false) -> void:
 	if _panel.visible and _texto == texto:
 		return # ya se esta mostrando este mismo mensaje
+	if _panel.visible and _prioritario and not prioritario:
+		return # el mensaje prioritario se queda hasta que se cierre
+	_prioritario = prioritario
 	_texto = texto
 	# La flecha va dentro del texto, asi queda siempre al final de la ultima linea.
 	_label.text = texto + FLECHA
@@ -117,6 +121,7 @@ func cerrar() -> void:
 	if _tween:
 		_tween.kill()
 	_escribiendo = false
+	_prioritario = false
 	_panel.hide()
 
 func _process(delta: float) -> void:

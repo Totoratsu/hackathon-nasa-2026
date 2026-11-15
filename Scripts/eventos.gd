@@ -127,6 +127,6 @@ func comprar_oxigeno() -> void:
 	print("Mejora de oxigeno comprada: el oxigeno dura x", FACTOR_OXIGENO, ". Dinero restante: ", dinero)
 
 # Muestra un mensaje en la caja de dialogo (y lo deja en la consola).
-func decir(texto: String) -> void:
+func decir(texto: String, prioritario := false) -> void:
 	print(texto)
-	caja_dialogo.mostrar(texto)
+	caja_dialogo.mostrar(texto, 4.0, prioritario)
