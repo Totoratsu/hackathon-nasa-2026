@@ -1240,7 +1240,6 @@ metadata/_tc_offline_added = true
 
 [node name="Misiones" parent="Ui" unique_id=1894639483 instance=ExtResource("18_mis")]
 
-
 [node name="Contador_basura" type="Label" parent="Ui" unique_id=1894639481]
 anchors_preset = 1
 anchor_left = 1.0

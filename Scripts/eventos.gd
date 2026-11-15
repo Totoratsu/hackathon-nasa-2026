@@ -33,6 +33,8 @@ var clima: Clima = Clima.NORMAL
 var mejora: int = SIN_MEJORA
 var timer_mejora := Timer.new()
 var oxigeno_mejorado := false  # mejora permanente, se compra una sola vez
+const ARCHIVO_FRASES := "res://datos/perro_frases.txt"
+const SEGUNDOS_FRASE := 15.0  # cada cuanto el perro dice una frase al azar
 const CajaDialogo := preload("res://Scripts/caja_dialogo.gd")
 var caja_dialogo: CanvasLayer
 
@@ -49,9 +51,23 @@ func _ready() -> void:
 	timer_clima.timeout.connect(_cambiar_clima)
 	add_child(timer_clima)
 	timer_clima.start()
+	var timer_frase := Timer.new()
+	timer_frase.wait_time = SEGUNDOS_FRASE
+	timer_frase.timeout.connect(_frase_del_perro)
+	add_child(timer_frase)
+	timer_frase.start()
 	timer_mejora.one_shot = true
 	timer_mejora.timeout.connect(_quitar_mejora)
 	add_child(timer_mejora)
+
+# Una frase al azar de ARCHIVO_FRASES (una por linea); no pisa un mensaje que se este mostrando.
+func _frase_del_perro() -> void:
+	if caja_dialogo._panel.visible:
+		return
+	var frases := Array(FileAccess.get_file_as_string(ARCHIVO_FRASES).split("
+")).map(func(f): return f.strip_edges()).filter(func(f): return not f.is_empty())
+	if not frases.is_empty():
+		caja_dialogo.mostrar(frases.pick_random())
 
 func sumar_dinero(cantidad: int) -> void:
 	dinero += cantidad
