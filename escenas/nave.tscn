@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://butjl7s3k6lhp" path="res://Sprites/SPRITES estacion-03-03.png" id="2_iaarx"]
 [ext_resource type="PackedScene" uid="uid://du034iihyng7t" path="res://escenas/basura/basura.tscn" id="3_c577p"]
 [ext_resource type="PackedScene" uid="uid://dc0f1l2sedle3" path="res://Scripts/puerta.tscn" id="5_3gjn0"]
-[ext_resource type="PackedScene" uid="uid://bwck3sjslr82j" path="res://escenas/luna.tscn" id="6_w4uoq"]
 [ext_resource type="PackedScene" uid="uid://dyrpolvmkvcnc" path="res://escenas/mesa_investigacion.tscn" id="14_mesa1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nf7ox"]
@@ -973,7 +972,7 @@ metadata/_tc_offline_added = true
 
 [node name="Area2D2" parent="." unique_id=781094645 instance=ExtResource("5_3gjn0")]
 position = Vector2(599, 64)
-escena = ExtResource("6_w4uoq")
+escena = "res://escenas/luna.tscn"
 
 [node name="mesa_investigacion" parent="." unique_id=1988492571 instance=ExtResource("14_mesa1")]
 position = Vector2(300, 250)

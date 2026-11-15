@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bys5oqsi316vy" path="res://escenas/Configuracion.tscn" id="9_cfg01"]
 [ext_resource type="PackedScene" uid="uid://lqi2irk5km8p" path="res://escenas/Misiones.tscn" id="10_mis01"]
 [ext_resource type="PackedScene" uid="uid://dc0f1l2sedle3" path="res://Scripts/puerta.tscn" id="11_vye1e"]
-[ext_resource type="PackedScene" uid="uid://da1kos5gg0kny" path="res://escenas/nave.tscn" id="12_8dqgw"]
 [ext_resource type="PackedScene" uid="uid://cdcsu1q5ir0mw" path="res://escenas/basura/basura2.tscn" id="14_ukwdo"]
 [ext_resource type="PackedScene" uid="uid://dy13mstne1inb" path="res://escenas/basura/basura3.tscn" id="15_i6mv6"]
 [ext_resource type="PackedScene" uid="uid://chq2jnu51ay3c" path="res://escenas/basura/basura4.tscn" id="16_hn86v"]
@@ -3556,7 +3555,7 @@ metadata/_tc_offline_added = true
 
 [node name="Area2D" parent="." unique_id=781094645 instance=ExtResource("11_vye1e")]
 position = Vector2(-971, -115)
-escena = ExtResource("12_8dqgw")
+escena = "res://escenas/nave.tscn"
 
 [node name="Basura" parent="." unique_id=1518748250 instance=ExtResource("14_ukwdo")]
 position = Vector2(835, 325)
