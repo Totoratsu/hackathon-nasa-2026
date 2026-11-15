@@ -20,7 +20,8 @@ func _ready() -> void:
 		raiz.add_child.call_deferred(pantalla) # raiz aun esta montando sus hijos
 		var boton := Button.new()
 		boton.text = "Mision %d" % n
-		boton.custom_minimum_size = Vector2(200, 0)
+		boton.custom_minimum_size = Vector2(300, 52)
+		boton.add_theme_font_size_override("font_size", 24)
 		boton.pressed.connect(pantalla.show)
 		add_child(boton)
 		pantalla.get_node("CerrarButton").pressed.connect(pantalla.hide)

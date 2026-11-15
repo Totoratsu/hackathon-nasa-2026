@@ -16,6 +16,8 @@ const SEGUNDOS_CLIMA := 10.0
 const SIN_MEJORA := -1
 const PRECIO_MEJORA := 15       # 3 basuras vendidas
 const DURACION_MEJORA := 60.0   # segundos
+const PRECIO_OXIGENO := 50
+const FACTOR_OXIGENO := 2.0     # con la mejora el oxigeno dura el doble
 
 # Estado que sobrevive a los cambios de escena (luna <-> nave).
 var mesa_disponible := false
@@ -28,6 +30,7 @@ var clima: Clima = Clima.NORMAL
 # La mejora es el clima que aguanta el traje (FRIO o CALIENTE). Solo una a la vez.
 var mejora: int = SIN_MEJORA
 var timer_mejora := Timer.new()
+var oxigeno_mejorado := false  # mejora permanente, se compra una sola vez
 
 func _ready() -> void:
 	mesa_investigacion.connect(func(disponible: bool): mesa_disponible = disponible)
@@ -83,3 +86,14 @@ func _quitar_mejora() -> void:
 
 func puede_salir() -> bool:
 	return clima == Clima.NORMAL or clima == mejora
+
+func comprar_oxigeno() -> void:
+	if oxigeno_mejorado:
+		print("Ya tienes la mejora de oxigeno")
+		return
+	if dinero < PRECIO_OXIGENO:
+		print("No te alcanza: necesitas ", PRECIO_OXIGENO)
+		return
+	sumar_dinero(-PRECIO_OXIGENO)
+	oxigeno_mejorado = true
+	print("Mejora de oxigeno comprada: el oxigeno dura x", FACTOR_OXIGENO, ". Dinero restante: ", dinero)
