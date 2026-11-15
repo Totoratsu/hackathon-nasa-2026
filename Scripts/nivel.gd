@@ -13,9 +13,19 @@ extends Node2D
 
 var _posiciones_suelo: PackedVector2Array = []
 
+const FLECHA := preload("res://Sprites/flecha.png")
+@export var distancia_flecha := 140.0       # a que distancia del jugador flota la flecha
+@export var distancia_ocultar_flecha := 300.0  # cerca de la puerta ya no hace falta
+@onready var puerta: Node2D = $Area2D
+var flecha := Sprite2D.new()
+
 static var aviso_basura_dado := false  # static: sobrevive al cambiar de escena
 
 func _ready():
+	flecha.texture = FLECHA
+	flecha.scale = Vector2(0.5, 0.5)
+	flecha.z_index = 10
+	add_child(flecha)
 	# En la luna el traje es obligatorio (cambio de LeJuanChis en 92f9d51).
 	# Diferido: este _ready corre antes que el del jugador (esta antes en el arbol),
 	# y activar_traje_obligatorio usa nodos que el jugador aun no ha preparado.
@@ -74,3 +84,10 @@ func generar_basura():
 	item.add_to_group("basura")
 	add_child(item)
 	item.global_position = candidatas.pick_random()
+
+func _process(_delta: float) -> void:
+	# La flecha flota junto al jugador y apunta a la puerta de la nave.
+	var hacia := puerta.global_position - player.global_position
+	flecha.visible = hacia.length() > distancia_ocultar_flecha
+	flecha.global_position = player.global_position + hacia.normalized() * distancia_flecha
+	flecha.rotation = hacia.angle()
