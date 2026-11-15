@@ -37,7 +37,8 @@ func _process(delta: float):
 
 func disminuir_oxigeno(delta: float):
 	if oxigeno_actual > 0.0:
-		oxigeno_actual -= consumo_por_segundo * delta
+		var factor := Eventos.FACTOR_OXIGENO if Eventos.oxigeno_mejorado else 1.0
+		oxigeno_actual -= consumo_por_segundo / factor * delta
 		oxigeno_actual = maxf(oxigeno_actual, 0.0)
 
 

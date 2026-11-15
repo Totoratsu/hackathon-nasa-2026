@@ -12,10 +12,14 @@ func _ready() -> void:
 	$Canvas/Panel/CerrarButton.pressed.connect(panel.hide)
 	$Canvas/Panel/Botones/FrioButton.pressed.connect(_on_frio_pressed)
 	$Canvas/Panel/Botones/CalorButton.pressed.connect(_on_calor_pressed)
+	$Canvas/Panel/Botones/OxigenoButton.pressed.connect(_on_oxigeno_pressed)
 	$Canvas/Panel/Botones/VenderButton.pressed.connect(Eventos.vender_una_basura)
 
 func _on_frio_pressed() -> void:
 	Eventos.comprar_mejora(Eventos.Clima.FRIO)
+
+func _on_oxigeno_pressed() -> void:
+	Eventos.comprar_oxigeno()
 
 func _on_calor_pressed() -> void:
 	Eventos.comprar_mejora(Eventos.Clima.CALIENTE)
@@ -32,6 +36,7 @@ func _actualizar_panel() -> void:
 	var puede_mejorar: bool = Eventos.dinero >= Eventos.PRECIO_MEJORA
 	$Canvas/Panel/Botones/FrioButton.disabled = not puede_mejorar
 	$Canvas/Panel/Botones/CalorButton.disabled = not puede_mejorar
+	$Canvas/Panel/Botones/OxigenoButton.disabled = Eventos.oxigeno_mejorado or Eventos.dinero < Eventos.PRECIO_OXIGENO
 	$Canvas/Panel/Botones/VenderButton.disabled = Eventos.basura_inventario <= 0
 	$Canvas/Panel/InfoLabel.text = "Dinero: %d   Basura: %d" % [Eventos.dinero, Eventos.basura_inventario]
 

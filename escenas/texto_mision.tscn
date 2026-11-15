@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://debmmvju60kei"]
+[ext_resource type="Texture2D" uid="uid://b44whgt4kr78l" path="res://Sprites/fondo misiones.jpeg" id="99_fondo"]
+[ext_resource type="Shader" path="res://Sprites/quitar_blanco.gdshader" id="98_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_blanco"]
+shader = ExtResource("98_shader")
 
 [sub_resource type="LabelSettings" id="LabelSettings_73821"]
-font_size = 40
-font_color = Color(0.97154075, 0, 0.12360398, 1)
+line_spacing = 8.0
+font_size = 26
+font_color = Color(0.92, 0.9, 1, 1)
+outline_size = 5
+outline_color = Color(0.08, 0.03, 0.25, 1)
 
 [node name="Texto_mision" type="ColorRect" unique_id=749312697]
 visible = false
@@ -11,6 +19,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+material = SubResource("ShaderMaterial_blanco")
+texture = ExtResource("99_fondo")
+expand_mode = 1
 
 [node name="CerrarButton" type="Button" parent="." unique_id=1599408316]
 layout_mode = 0
@@ -21,12 +42,10 @@ text = "x"
 [node name="Label" type="Label" parent="." unique_id=590348019]
 layout_mode = 1
 anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 33.0
-offset_top = 60.0
-offset_right = -33.0
-offset_bottom = -33.0
+anchor_left = 0.13
+anchor_top = 0.38
+anchor_right = 0.87
+anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
 text = "Escribe aqui la mision"
@@ -41,9 +60,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -75.0
-offset_top = -80.0
+offset_top = -120.0
 offset_right = 75.0
-offset_bottom = -30.0
+offset_bottom = -75.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Finalizado"

@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://c7qujm5i7odye" path="res://Scripts/misiones.gd" id="1_73821"]
 [ext_resource type="Script" uid="uid://u665xq6rafdb" path="res://Scripts/lista_misiones.gd" id="2_lista"]
+[ext_resource type="Shader" uid="uid://6jsb2wubwq3f" path="res://Sprites/quitar_blanco.gdshader" id="98_shader"]
+[ext_resource type="Texture2D" uid="uid://b44whgt4kr78l" path="res://Sprites/fondo misiones.jpeg" id="99_fondo"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_73821"]
-font_size = 40
-font_color = Color(0.97154075, 0, 0.12360398, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_blanco"]
+shader = ExtResource("98_shader")
 
 [node name="Control" type="Control" unique_id=1340639622]
 layout_mode = 3
@@ -40,14 +41,23 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = 18.0
-offset_right = 16.0
-offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 0.46666667)
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "4774993753605022824"
+
+[node name="Fondo" type="TextureRect" parent="Panel_misiones" unique_id=1264271858]
+material = SubResource("ShaderMaterial_blanco")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("99_fondo")
+expand_mode = 1
 
 [node name="CerrarButton" type="Button" parent="Panel_misiones" unique_id=136920156]
 layout_mode = 0
@@ -58,31 +68,27 @@ metadata/_tc_offline_added = true
 metadata/_tc_uuid = "4784721579363867581"
 
 [node name="Control" type="Control" parent="Panel_misiones" unique_id=1618705543]
-anchors_preset = 0
-offset_left = -147.0
-offset_top = 110.0
-offset_right = -107.0
-offset_bottom = 150.0
-metadata/_tc_offline_added = true
-metadata/_tc_uuid = "4437371824083116645"
-
-[node name="Label" type="Label" parent="Panel_misiones/Control" unique_id=1577794320]
-layout_mode = 0
-offset_left = 169.0
-offset_top = -108.0
-offset_right = 568.0
-offset_bottom = -53.0
-text = "Comandante: Misión"
-label_settings = SubResource("LabelSettings_73821")
-vertical_alignment = 1
-metadata/_tc_offline_added = true
-metadata/_tc_uuid = "1246629554264481202"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="Lista" type="VBoxContainer" parent="Panel_misiones/Control" unique_id=1361741439]
-layout_mode = 0
-offset_left = 535.0
-offset_top = 15.0
-offset_right = 735.0
-offset_bottom = 55.0
-theme_override_constants/separation = 12
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.58
+anchor_right = 0.5
+anchor_bottom = 0.58
+offset_left = -160.0
+offset_top = -90.0
+offset_right = 160.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
 script = ExtResource("2_lista")

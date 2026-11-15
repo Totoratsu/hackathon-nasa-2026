@@ -3,6 +3,7 @@ extends Label
 # Se usa tanto en la luna como en la nave; lee todo de Eventos.
 
 func _ready() -> void:
+	add_to_group("ocultar_en_misiones")
 	_actualizar()
 	Eventos.basura_recogida.connect(func(_c: int): _actualizar())
 	Eventos.mesa_investigacion.connect(func(_d: bool): _actualizar())

@@ -92,6 +92,13 @@ custom_minimum_size = Vector2(320, 0)
 theme_override_font_sizes/font_size = 28
 text = "Mejora al calor (15)"
 
+[node name="OxigenoButton" type="Button" parent="Canvas/Panel/Botones" unique_id=1700000006]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(320, 0)
+theme_override_font_sizes/font_size = 28
+text = "Mejora de oxígeno (50)"
+
 [node name="VenderButton" type="Button" parent="Canvas/Panel/Botones" unique_id=1700000004]
 layout_mode = 2
 size_flags_horizontal = 4
