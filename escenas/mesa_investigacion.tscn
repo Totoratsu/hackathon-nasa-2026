@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bim3tfemj4haw" path="res://escenas/mesa_investigacion.gd" id="1_4joek"]
 [ext_resource type="Texture2D" uid="uid://0qlcjfxtu2ty" path="res://Sprites/sprite mesa de trabajo.png" id="2_4joek"]
+[ext_resource type="Texture2D" uid="uid://b43pfhnycva3f" path="res://Sprites/sprites botones.png" id="96_botones"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x"]
+atlas = ExtResource("96_botones")
+region = Rect2(424, 32, 68, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwbu8"]
 size = Vector2(244.68555, 100)
@@ -43,9 +48,15 @@ color = Color(0.05, 0.1, 0.2, 0.95)
 
 [node name="CerrarButton" type="Button" parent="Canvas/Panel" unique_id=59842538]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "x"
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 60.0
+offset_bottom = 60.0
+icon = SubResource("AtlasTexture_x")
+flat = true
+expand_icon = true
+icon_alignment = 1
+custom_minimum_size = Vector2(48, 48)
 
 [node name="Label" type="Label" parent="Canvas/Panel" unique_id=2039465897]
 layout_mode = 1

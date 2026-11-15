@@ -1233,16 +1233,21 @@ metadata/_tc_offline_added = true
 [node name="Ui" type="CanvasLayer" parent="." unique_id=1477804254]
 
 [node name="Control" parent="Ui" unique_id=1894639480 instance=ExtResource("15_ui01")]
-offset_left = 848.0
-offset_top = 133.0
-offset_right = 1260.0
-offset_bottom = 171.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 308.0
+offset_bottom = 104.0
 
 [node name="Contador_basura" type="Label" parent="Ui" unique_id=1894639481]
-offset_left = 943.0
-offset_top = 24.0
-offset_right = 1004.0
-offset_bottom = 47.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -123.0
+offset_top = 56.0
+offset_right = -19.0
+offset_bottom = 102.0
+grow_horizontal = 0
+horizontal_alignment = 1
 theme_override_font_sizes/font_size = 36
 script = ExtResource("16_cont")
 

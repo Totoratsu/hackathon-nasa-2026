@@ -1,6 +1,6 @@
 extends Control
 
-@onready var label: Label = $VBoxContainer/Fila/dinero_label
+@onready var label: Label = $Fila/dinero_label
 
 func _ready() -> void:
 	_actualizar(Eventos.dinero)

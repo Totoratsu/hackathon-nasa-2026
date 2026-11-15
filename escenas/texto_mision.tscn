@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://debmmvju60kei"]
 [ext_resource type="Texture2D" uid="uid://b44whgt4kr78l" path="res://Sprites/fondo misiones.jpeg" id="99_fondo"]
 [ext_resource type="Shader" path="res://Sprites/quitar_blanco.gdshader" id="98_shader"]
+[ext_resource type="Texture2D" uid="uid://b43pfhnycva3f" path="res://Sprites/sprites botones.png" id="96_botones"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x"]
+atlas = ExtResource("96_botones")
+region = Rect2(424, 32, 68, 62)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_blanco"]
 shader = ExtResource("98_shader")
@@ -35,9 +40,15 @@ expand_mode = 1
 
 [node name="CerrarButton" type="Button" parent="." unique_id=1599408316]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "x"
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 68.0
+offset_bottom = 68.0
+icon = SubResource("AtlasTexture_x")
+flat = true
+expand_icon = true
+icon_alignment = 1
+custom_minimum_size = Vector2(56, 56)
 
 [node name="Label" type="Label" parent="." unique_id=590348019]
 layout_mode = 1
