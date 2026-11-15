@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cpwtvyw4y7es6" path="res://Scripts/main_menu.gd" id="1_2cr0s"]
 [ext_resource type="Texture2D" uid="uid://b0b3jmvigsytv" path="res://Sprites/menu principal espacio.PNG" id="1_ter2f"]
 [ext_resource type="AudioStream" uid="uid://cbokwc0ug444k" path="res://canciones/main-menu.mp3" id="3_vhgtv"]
+[ext_resource type="Texture2D" uid="uid://bqaqjq00kfmp5" path="res://Sprites/LOGO.png" id="4_logo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ter2f"]
 bg_color = Color(0.3019608, 0.11372549, 1, 0.25490198)
@@ -33,10 +34,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -231.0
-offset_top = -107.5
-offset_right = 231.0
-offset_bottom = 107.5
+offset_left = -233.0
+offset_top = -7.0
+offset_right = 229.0
+offset_bottom = 280.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 40
@@ -83,20 +84,20 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ter2f")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
 text = "EXIT"
 
-[node name="Label" type="Label" parent="." unique_id=35307034]
+[node name="Logo" type="TextureRect" parent="." unique_id=35307034]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -220.5
-offset_right = 220.5
-offset_bottom = 144.0
+offset_left = -305.0
+offset_top = 1.0
+offset_right = 596.0
+offset_bottom = 319.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 45
-text = "SPACE  
-ADVENTURES"
-horizontal_alignment = 1
-vertical_alignment = 1
+mouse_filter = 2
+texture = ExtResource("4_logo")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1671233387]
 stream = ExtResource("3_vhgtv")
