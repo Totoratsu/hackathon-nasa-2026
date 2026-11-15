@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://byrf77fmx1tqs"]
+
+[ext_resource type="Script" uid="uid://cpwtvyw4y7es6" path="res://Scripts/main_menu.gd" id="1_2cr0s"]
+[ext_resource type="Texture2D" uid="uid://b0b3jmvigsytv" path="res://Sprites/menu principal espacio.PNG" id="1_ter2f"]
+[ext_resource type="AudioStream" uid="uid://cbokwc0ug444k" path="res://canciones/main-menu.mp3" id="3_vhgtv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ter2f"]
+bg_color = Color(0.3019608, 0.11372549, 1, 0.25490198)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[node name="Main menu" type="Control" unique_id=1122741894]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2cr0s")
+
+[node name="MenuPrincipalEspacio" type="Sprite2D" parent="." unique_id=1190021285]
+position = Vector2(572.93787, 331.31662)
+rotation = 0.0014302777
+scale = Vector2(-0.7161954, 0.77550626)
+texture = ExtResource("1_ter2f")
+
+[node name="BoxContainer" type="VBoxContainer" parent="." unique_id=1987319408]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = -107.5
+offset_right = 231.0
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="start" type="Button" parent="BoxContainer" unique_id=797640542]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
+text = "PLAY"
+
+[node name="settings" type="Button" parent="BoxContainer" unique_id=1134684837]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
+text = "SETTINGS"
+
+[node name="exit" type="Button" parent="BoxContainer" unique_id=1892215416]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ter2f")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ter2f")
+text = "EXIT"
+
+[node name="Label" type="Label" parent="." unique_id=35307034]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -220.5
+offset_right = 220.5
+offset_bottom = 144.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 45
+text = "AUN NO TIENE NOMBRE (NO TIENE NOMBRE)"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1671233387]
+stream = ExtResource("3_vhgtv")
+autoplay = true
+
+[connection signal="pressed" from="BoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="BoxContainer/start" to="BoxContainer/start" method="_on_pressed"]
+[connection signal="pressed" from="BoxContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="BoxContainer/exit" to="." method="_on_exit_pressed"]

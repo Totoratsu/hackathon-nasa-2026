@@ -48,7 +48,7 @@ func disminuir_oxigeno(delta: float):
 func morir_por_asfixia():
 	set_process(false)
 	print("¡Te has quedado sin oxígeno!")
-	get_tree().change_scene_to_file("res://escenas/luna.tscn")
+	get_tree().change_scene_to_file("res://escenas/game over.tscn")
 
 
 func _physics_process(_delta):
