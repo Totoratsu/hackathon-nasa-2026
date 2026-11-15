@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://b4rddqptw1qhq" path="res://Sprites/elementos 13-01.png" id="5_xjvse"]
 [ext_resource type="Texture2D" uid="uid://butjl7s3k6lhp" path="res://Sprites/SPRITES estacion-03-03.png" id="6_4a16p"]
 [ext_resource type="PackedScene" uid="uid://belhqcd41segt" path="res://escenas/ui_usuario.tscn" id="6_l2lj0"]
-[ext_resource type="PackedScene" uid="uid://bys5oqsi316vy" path="res://escenas/Configuracion.tscn" id="9_cfg01"]
 [ext_resource type="PackedScene" uid="uid://lqi2irk5km8p" path="res://escenas/Misiones.tscn" id="10_mis01"]
 [ext_resource type="PackedScene" uid="uid://dc0f1l2sedle3" path="res://Scripts/puerta.tscn" id="11_vye1e"]
 [ext_resource type="PackedScene" uid="uid://cdcsu1q5ir0mw" path="res://escenas/basura/basura2.tscn" id="14_ukwdo"]
@@ -3727,8 +3726,6 @@ metadata/_tc_uuid = "9186316880875959484"
 
 [node name="Control" parent="Ui" unique_id=1894639479 instance=ExtResource("6_l2lj0")]
 metadata/_tc_offline_added = true
-
-[node name="Configuracion" parent="Ui" unique_id=58801262 instance=ExtResource("9_cfg01")]
 
 [node name="Misiones" parent="Ui" unique_id=771386252 instance=ExtResource("10_mis01")]
 

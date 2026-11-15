@@ -9,6 +9,7 @@ extends CharacterBody2D
 @export var consume_oxigeno: bool = false
 
 var oxigeno_actual: float = 100.0
+var aviso_oxigeno := false  # el perro avisa una sola vez al llegar al 30%
 const velocidad = 350
 var traje = false
 var traje_obligatorio = false
@@ -41,6 +42,9 @@ func disminuir_oxigeno(delta: float):
 		var factor := Eventos.FACTOR_OXIGENO if Eventos.oxigeno_mejorado else 1.0
 		oxigeno_actual -= consumo_por_segundo / factor * delta
 		oxigeno_actual = maxf(oxigeno_actual, 0.0)
+		if not aviso_oxigeno and oxigeno_actual <= max_oxigeno * 0.3:
+			aviso_oxigeno = true
+			Eventos.decir("Hey, se te está acabando el oxígeno, vuelve a casa", true)
 
 
 func morir_por_asfixia():

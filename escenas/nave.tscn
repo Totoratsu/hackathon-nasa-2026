@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://dyrpolvmkvcnc" path="res://escenas/mesa_investigacion.tscn" id="14_mesa1"]
 [ext_resource type="PackedScene" uid="uid://belhqcd41segt" path="res://escenas/ui_usuario.tscn" id="15_ui01"]
 [ext_resource type="Script" uid="uid://b4ykl06x1pf7g" path="res://Scripts/contador_basura.gd" id="16_cont"]
-[ext_resource type="PackedScene" uid="uid://bys5oqsi316vy" path="res://escenas/Configuracion.tscn" id="17_cfg"]
 [ext_resource type="PackedScene" uid="uid://lqi2irk5km8p" path="res://escenas/Misiones.tscn" id="18_mis"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nf7ox"]
@@ -1236,8 +1235,6 @@ metadata/_tc_offline_added = true
 [node name="Ui" type="CanvasLayer" parent="." unique_id=1477804254]
 
 [node name="Control" parent="Ui" unique_id=1894639480 instance=ExtResource("15_ui01")]
-
-[node name="Configuracion" parent="Ui" unique_id=1894639482 instance=ExtResource("17_cfg")]
 
 [node name="Misiones" parent="Ui" unique_id=1894639483 instance=ExtResource("18_mis")]
 

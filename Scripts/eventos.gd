@@ -62,7 +62,8 @@ func _ready() -> void:
 
 # Una frase al azar de ARCHIVO_FRASES (una por linea); no pisa un mensaje que se este mostrando.
 func _frase_del_perro() -> void:
-	if caja_dialogo._panel.visible:
+	# Solo habla durante el juego: sin jugador en la escena (game over, menu) calla.
+	if get_tree().get_first_node_in_group("player") == null or caja_dialogo._panel.visible:
 		return
 	var frases := Array(FileAccess.get_file_as_string(ARCHIVO_FRASES).split("
 ")).map(func(f): return f.strip_edges()).filter(func(f): return not f.is_empty())
@@ -126,6 +127,6 @@ func comprar_oxigeno() -> void:
 	print("Mejora de oxigeno comprada: el oxigeno dura x", FACTOR_OXIGENO, ". Dinero restante: ", dinero)
 
 # Muestra un mensaje en la caja de dialogo (y lo deja en la consola).
-func decir(texto: String) -> void:
+func decir(texto: String, prioritario := false) -> void:
 	print(texto)
-	caja_dialogo.mostrar(texto)
+	caja_dialogo.mostrar(texto, 4.0, prioritario)

@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://bys5oqsi316vy"]
+[gd_scene format=3 uid="uid://dwns65411c54d"]
 
 [ext_resource type="Script" uid="uid://c7qujm5i7odye" path="res://Scripts/misiones.gd" id="1_w1m1a"]
-[ext_resource type="Texture2D" uid="uid://cs7gusirc67wm" path="res://Sprites/sprites iconos.png" id="97_iconos"]
 [ext_resource type="Texture2D" uid="uid://b43pfhnycva3f" path="res://Sprites/sprites botones.png" id="96_botones"]
+[ext_resource type="Texture2D" uid="uid://cs7gusirc67wm" path="res://Sprites/sprites iconos.png" id="97_iconos"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_icono"]
 
@@ -40,19 +40,18 @@ metadata/_tc_offline_added = true
 metadata/_tc_uuid = "5501427529473262954"
 
 [node name="Configuracion_button" type="Button" parent="VBoxContainer" unique_id=552112744]
+custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 focus_mode = 0
-toggle_mode = false
-icon = SubResource("AtlasTexture_icono")
-flat = true
-expand_icon = true
-icon_alignment = 1
-custom_minimum_size = Vector2(96, 96)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_icono")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_icono")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_icono")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_icono")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_icono")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_icono")
+icon = SubResource("AtlasTexture_icono")
+flat = true
+icon_alignment = 1
+expand_icon = true
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "4926074656766081957"
 
@@ -76,6 +75,7 @@ text = "Volume"
 metadata/_tc_offline_added = true
 
 [node name="CerrarButton" type="Button" parent="Panel_misiones" unique_id=136920156]
+custom_minimum_size = Vector2(56, 56)
 layout_mode = 0
 offset_left = 12.0
 offset_top = 12.0
@@ -83,9 +83,8 @@ offset_right = 68.0
 offset_bottom = 68.0
 icon = SubResource("AtlasTexture_x")
 flat = true
-expand_icon = true
 icon_alignment = 1
-custom_minimum_size = Vector2(56, 56)
+expand_icon = true
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "4784721579363867581"
 
