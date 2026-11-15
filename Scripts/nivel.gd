@@ -2,9 +2,7 @@ extends Node2D
 
 @onready var player : CharacterBody2D = $player
 @export var item_scene: PackedScene
-@onready var label_contador = $Ui/Control/VBoxContainer/dinero_label
 
-var contador := 0
 @export var intervalo := 2.0
 
 func _ready():
@@ -23,5 +21,4 @@ func generar_item():
 
 func _on_item_body_entered(body: Node2D):
 	if body.is_in_group("player"):
-		contador += 1
-		label_contador.text = "contador : %d" % contador
+		Eventos.sumar_dinero(1)

@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://belhqcd41segt"]
 
+[ext_resource type="Script" path="res://Scripts/ui_usuario.gd" id="1_uiusr"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_3w5bs"]
 font_size = 46
 font_color = Color(0.30777752, 0.112517156, 0.0011473168, 1)
@@ -17,6 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
 offset_transform_enabled = true
+script = ExtResource("1_uiusr")
 metadata/_tc_uuid = "8291226749081620147"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=623772654]

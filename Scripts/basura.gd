@@ -21,6 +21,7 @@ func _on_body_exited(body: Node2D):
 func _process(_delta):
 	if jugador_cerca and Input.is_action_pressed("basura"):
 		cantidadBasura += 1
+		Eventos.basura_inventario += 1
 		Eventos.basura_recogida.emit(cantidadBasura)
 		print("Basura recogida: ", cantidadBasura)
 		queue_free()
