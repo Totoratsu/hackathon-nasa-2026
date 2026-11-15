@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dy13mstne1inb" path="res://escenas/basura/basura3.tscn" id="15_i6mv6"]
 [ext_resource type="PackedScene" uid="uid://chq2jnu51ay3c" path="res://escenas/basura/basura4.tscn" id="16_hn86v"]
 [ext_resource type="PackedScene" uid="uid://du034iihyng7t" path="res://escenas/basura/basura.tscn" id="17_dho5l"]
+[ext_resource type="PackedScene" uid="uid://bs8yn0158yw04" path="res://escenas/Perro robótico.tscn" id="17_ukwdo"]
 [ext_resource type="Script" uid="uid://b4ykl06x1pf7g" path="res://Scripts/contador_basura.gd" id="99_cont"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfnt6"]
@@ -3746,3 +3747,5 @@ metadata/_tc_offline_added = true
 position = Vector2(-971, -115)
 escena_destino = "uid://da1kos5gg0kny"
 
+[node name="Node2D" parent="." unique_id=363928282 instance=ExtResource("17_ukwdo")]
+position = Vector2(-272, 74)
