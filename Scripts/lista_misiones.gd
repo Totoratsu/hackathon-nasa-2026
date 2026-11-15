@@ -21,13 +21,22 @@ func _ready() -> void:
 		var boton := Button.new()
 		boton.text = "Mision %d" % n
 		boton.custom_minimum_size = Vector2(200, 0)
-		boton.disabled = n > 1
 		boton.pressed.connect(pantalla.show)
 		add_child(boton)
 		pantalla.get_node("CerrarButton").pressed.connect(pantalla.hide)
-		pantalla.get_node("FinalizadoButton").pressed.connect(_finalizar.bind(pantalla, n - 1))
+		pantalla.get_node("FinalizadoButton").pressed.connect(_finalizar.bind(pantalla, n))
+		if n == 1: # la mision 1 solo termina al vender la basura
+			pantalla.get_node("FinalizadoButton").visible = false
+	_actualizar()
+	Eventos.mision_completada.connect(func(_numero: int): _actualizar())
 
-func _finalizar(pantalla: Control, indice: int) -> void:
+func _finalizar(pantalla: Control, numero: int) -> void:
 	pantalla.hide()
-	if indice + 1 < get_child_count():
-		get_child(indice + 1).disabled = false
+	Eventos.completar_mision(numero)
+
+# Una mision se habilita cuando la anterior esta completada.
+func _actualizar() -> void:
+	for i in get_child_count():
+		var boton: Button = get_child(i)
+		boton.disabled = i > Eventos.misiones_completadas
+		boton.text = "Mision %d" % (i + 1) + (" (lista)" if i < Eventos.misiones_completadas else "")

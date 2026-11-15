@@ -3540,6 +3540,7 @@ offset_left = 848.0
 offset_top = 133.0
 offset_right = 1260.0
 offset_bottom = 171.0
+script = null
 metadata/_tc_offline_added = true
 
 [node name="Configuracion" parent="Ui" unique_id=58801262 instance=ExtResource("9_cfg01")]

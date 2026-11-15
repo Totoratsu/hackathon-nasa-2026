@@ -4484,5 +4484,5 @@ metadata/_tc_offline_added = true
 position = Vector2(599, 64)
 escena = SubResource("PackedScene_piia2")
 
-[node name="mesa_investigacion" parent="." instance=ExtResource("14_mesa1")]
+[node name="mesa_investigacion" parent="." unique_id=1988492571 instance=ExtResource("14_mesa1")]
 position = Vector2(300, 250)
