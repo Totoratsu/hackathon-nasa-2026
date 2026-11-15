@@ -9,6 +9,7 @@ extends Control
 const GRUPO_HUD := "ocultar_en_misiones"
 
 func _ready() -> void:
+	$VBoxContainer.add_to_group(GRUPO_HUD) # el icono se oculta mientras hay un menu abierto
 	configuracion_button.button_down.connect(_on_misiones_pressed)
 	cerrar_button.pressed.connect(_on_cerrar_pressed)
 	panel_misiones.visible = false

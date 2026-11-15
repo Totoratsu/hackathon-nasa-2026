@@ -4,6 +4,18 @@
 [ext_resource type="Script" uid="uid://u665xq6rafdb" path="res://Scripts/lista_misiones.gd" id="2_lista"]
 [ext_resource type="Shader" uid="uid://6jsb2wubwq3f" path="res://Sprites/quitar_blanco.gdshader" id="98_shader"]
 [ext_resource type="Texture2D" uid="uid://b44whgt4kr78l" path="res://Sprites/fondo misiones.jpeg" id="99_fondo"]
+[ext_resource type="Texture2D" uid="uid://cs7gusirc67wm" path="res://Sprites/sprites iconos.png" id="97_iconos"]
+[ext_resource type="Texture2D" uid="uid://b43pfhnycva3f" path="res://Sprites/sprites botones.png" id="96_botones"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_icono"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x"]
+atlas = ExtResource("96_botones")
+region = Rect2(424, 32, 68, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icono"]
+atlas = ExtResource("97_iconos")
+region = Rect2(134, 6, 116, 116)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_blanco"]
 shader = ExtResource("98_shader")
@@ -22,17 +34,27 @@ metadata/_tc_uuid = "869121451356716803"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=517670959]
 layout_mode = 0
-offset_top = 50.0
-offset_right = 40.0
-offset_bottom = 90.0
+offset_left = 8.0
+offset_top = 112.0
+offset_right = 104.0
+offset_bottom = 208.0
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "5501427529473262954"
 
 [node name="Configuracion_button" type="Button" parent="VBoxContainer" unique_id=552112744]
 layout_mode = 2
 focus_mode = 0
-toggle_mode = true
-text = "Misiones"
+toggle_mode = false
+icon = SubResource("AtlasTexture_icono")
+flat = true
+expand_icon = true
+icon_alignment = 1
+custom_minimum_size = Vector2(96, 96)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_icono")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_icono")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_icono")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_icono")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_icono")
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "4926074656766081957"
 
@@ -61,9 +83,15 @@ expand_mode = 1
 
 [node name="CerrarButton" type="Button" parent="Panel_misiones" unique_id=136920156]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "x"
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 68.0
+offset_bottom = 68.0
+icon = SubResource("AtlasTexture_x")
+flat = true
+expand_icon = true
+icon_alignment = 1
+custom_minimum_size = Vector2(56, 56)
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "4784721579363867581"
 

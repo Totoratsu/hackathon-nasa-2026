@@ -93,7 +93,10 @@ offset_right = 220.5
 offset_bottom = 144.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 45
-text = "AUN NO TIENE NOMBRE (NO TIENE NOMBRE)"
+text = "SPACE  
+ADVENTURES"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1671233387]
 stream = ExtResource("3_vhgtv")

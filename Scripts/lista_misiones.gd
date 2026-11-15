@@ -26,7 +26,7 @@ func _ready() -> void:
 		add_child(boton)
 		pantalla.get_node("CerrarButton").pressed.connect(pantalla.hide)
 		pantalla.get_node("FinalizadoButton").pressed.connect(_finalizar.bind(pantalla, n))
-		if n == 1: # la mision 1 solo termina al vender la basura
+		if n <= 3: # misiones 1-3 se completan solas (vender basura, comprar mejoras)
 			pantalla.get_node("FinalizadoButton").visible = false
 	_actualizar()
 	Eventos.mision_completada.connect(func(_numero: int): _actualizar())

@@ -6,13 +6,15 @@ signal dinero_cambiado(dinero: int)
 signal mision_completada(numero: int)
 signal clima_cambiado(clima: int)
 signal mejora_cambiada(mejora: int)
+signal oxigeno_comprado  # solo al comprar la mejora de oxigeno
+signal mejora_comprada(tipo: int)  # solo al comprar (no al expirar)
 
 const PRECIO_BASURA := 5
 const BASURA_MISION_1 := 5
 
 # Mismo orden que los dibujos de sprites clima.png: 0 = frio, 1 = normal, 2 = caliente
 enum Clima { FRIO, NORMAL, CALIENTE }
-const SEGUNDOS_CLIMA := 10.0
+const SEGUNDOS_CLIMA := 120.0  # el clima cambia cada 2 minutos
 const SIN_MEJORA := -1
 const PRECIO_MEJORA := 15       # 3 basuras vendidas
 const DURACION_MEJORA := 60.0   # segundos
@@ -35,6 +37,8 @@ const CajaDialogo := preload("res://Scripts/caja_dialogo.gd")
 var caja_dialogo: CanvasLayer
 
 func _ready() -> void:
+	oxigeno_comprado.connect(func(): completar_mision(3))  # mision 3: mejora de oxigeno
+	mejora_comprada.connect(func(_tipo: int): completar_mision(2))  # mision 2: primera mejora de frio/calor
 	# La caja de dialogo vive en el autoload: sirve en cualquier escena.
 	caja_dialogo = CajaDialogo.new()
 	add_child(caja_dialogo)
@@ -82,6 +86,7 @@ func comprar_mejora(tipo: Clima) -> void:
 	mejora = tipo                        # reemplaza la anterior
 	timer_mejora.start(DURACION_MEJORA)  # el tiempo empieza de cero
 	mejora_cambiada.emit(mejora)
+	mejora_comprada.emit(tipo)
 	print("Mejora comprada: ", Clima.keys()[tipo], " (", int(DURACION_MEJORA), " s). Dinero restante: ", dinero)
 
 func _quitar_mejora() -> void:
@@ -101,6 +106,7 @@ func comprar_oxigeno() -> void:
 		return
 	sumar_dinero(-PRECIO_OXIGENO)
 	oxigeno_mejorado = true
+	oxigeno_comprado.emit()
 	print("Mejora de oxigeno comprada: el oxigeno dura x", FACTOR_OXIGENO, ". Dinero restante: ", dinero)
 
 # Muestra un mensaje en la caja de dialogo (y lo deja en la consola).

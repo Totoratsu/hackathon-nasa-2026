@@ -25,6 +25,7 @@ func _ready():
 	barra_oxigeno.visible = traje
 
 	add_to_group("player")
+	$CanvasLayer.add_to_group("ocultar_en_misiones") # la barra de oxigeno se oculta con los menus
 
 
 func _process(delta: float):
