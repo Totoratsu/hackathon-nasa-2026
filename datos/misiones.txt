@@ -1,4 +1,4 @@
-Mision 1: escribe aqui la instruccion
+Misión 1: Recolecta basura espacial\n1. Dirígete hacia la salida, ponte tu casco y sal al exterior.\n2. Recolecta la mayor cantidad de basura espacial que puedas.\n3. Se te está agotando el oxígeno, vuelve a la nave ya.\n4. Entra y dirígete hacia el laboratorio\n5. Examina la basura en el menú de investigación
 Mision 2: escribe aqui la instruccion
 Mision 3: escribe aqui la instruccion
 Mision 4: escribe aqui la instruccion
