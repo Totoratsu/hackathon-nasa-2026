@@ -22,6 +22,7 @@ var mesa_disponible := false
 var dinero := 0
 var basura_inventario := 0  # recogida y aun sin vender
 var basura_vendida := 0
+var basura_recogida_total := 0  # total recogido (para el contador de la mision 1)
 var misiones_completadas := 0
 var clima: Clima = Clima.NORMAL
 # La mejora es el clima que aguanta el traje (FRIO o CALIENTE). Solo una a la vez.
@@ -44,14 +45,14 @@ func sumar_dinero(cantidad: int) -> void:
 	dinero += cantidad
 	dinero_cambiado.emit(dinero)
 
-# Se llama al tocar la mesa de trabajo.
-func vender_basura() -> void:
+
+# Boton "Vender basura" del menu de investigacion: una basura por pulsacion.
+func vender_una_basura() -> void:
 	if basura_inventario == 0:
 		return
-	print("Vendidas ", basura_inventario, " basuras: +", basura_inventario * PRECIO_BASURA)
-	sumar_dinero(basura_inventario * PRECIO_BASURA)
-	basura_vendida += basura_inventario
-	basura_inventario = 0
+	basura_inventario -= 1
+	sumar_dinero(PRECIO_BASURA)
+	basura_vendida += 1
 	if basura_vendida >= BASURA_MISION_1:
 		completar_mision(1)
 
@@ -73,8 +74,10 @@ func comprar_mejora(tipo: Clima) -> void:
 	mejora = tipo                        # reemplaza la anterior
 	timer_mejora.start(DURACION_MEJORA)  # el tiempo empieza de cero
 	mejora_cambiada.emit(mejora)
+	print("Mejora comprada: ", Clima.keys()[tipo], " (", int(DURACION_MEJORA), " s). Dinero restante: ", dinero)
 
 func _quitar_mejora() -> void:
+	print("La mejora expiró")
 	mejora = SIN_MEJORA
 	mejora_cambiada.emit(mejora)
 

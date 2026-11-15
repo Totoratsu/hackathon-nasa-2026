@@ -66,3 +66,49 @@ autowrap_mode = 3
 position = Vector2(548, 81)
 texture = ExtResource("2_4joek")
 metadata/_tc_offline_added = true
+
+[node name="Botones" type="VBoxContainer" parent="Canvas/Panel" unique_id=1700000001]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="FrioButton" type="Button" parent="Canvas/Panel/Botones" unique_id=1700000002]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(320, 0)
+theme_override_font_sizes/font_size = 28
+text = "Mejora al frío (15)"
+
+[node name="CalorButton" type="Button" parent="Canvas/Panel/Botones" unique_id=1700000003]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(320, 0)
+theme_override_font_sizes/font_size = 28
+text = "Mejora al calor (15)"
+
+[node name="VenderButton" type="Button" parent="Canvas/Panel/Botones" unique_id=1700000004]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(320, 0)
+theme_override_font_sizes/font_size = 28
+text = "Vender basura (+5)"
+
+[node name="InfoLabel" type="Label" parent="Canvas/Panel" unique_id=1700000005]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 120.0
+offset_right = 250.0
+offset_bottom = 170.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 28
+text = "Dinero: 0   Basura: 0"
+horizontal_alignment = 1

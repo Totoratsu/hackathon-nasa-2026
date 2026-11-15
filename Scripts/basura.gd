@@ -22,6 +22,7 @@ func _process(_delta):
 	if jugador_cerca and Input.is_action_pressed("basura"):
 		cantidadBasura += 1
 		Eventos.basura_inventario += 1
+		Eventos.basura_recogida_total = cantidadBasura
 		Eventos.basura_recogida.emit(cantidadBasura)
 		print("Basura recogida: ", cantidadBasura)
 		queue_free()

@@ -10,17 +10,34 @@ func _ready() -> void:
 	zona.body_exited.connect(_on_body_exited)
 	panel.visible = false
 	$Canvas/Panel/CerrarButton.pressed.connect(panel.hide)
+	$Canvas/Panel/Botones/FrioButton.pressed.connect(_on_frio_pressed)
+	$Canvas/Panel/Botones/CalorButton.pressed.connect(_on_calor_pressed)
+	$Canvas/Panel/Botones/VenderButton.pressed.connect(Eventos.vender_una_basura)
+
+func _on_frio_pressed() -> void:
+	Eventos.comprar_mejora(Eventos.Clima.FRIO)
+
+func _on_calor_pressed() -> void:
+	Eventos.comprar_mejora(Eventos.Clima.CALIENTE)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		jugador_cerca = true
-		Eventos.vender_basura()
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		jugador_cerca = false
 
+func _actualizar_panel() -> void:
+	var puede_mejorar: bool = Eventos.dinero >= Eventos.PRECIO_MEJORA
+	$Canvas/Panel/Botones/FrioButton.disabled = not puede_mejorar
+	$Canvas/Panel/Botones/CalorButton.disabled = not puede_mejorar
+	$Canvas/Panel/Botones/VenderButton.disabled = Eventos.basura_inventario <= 0
+	$Canvas/Panel/InfoLabel.text = "Dinero: %d   Basura: %d" % [Eventos.dinero, Eventos.basura_inventario]
+
 func _process(_delta: float) -> void:
+	if panel.visible:
+		_actualizar_panel()
 	if jugador_cerca and Input.is_action_just_pressed("basura"):
 		if Eventos.mesa_disponible:
 			panel.show()
