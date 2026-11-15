@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+# static: se comparte entre todas las basuras; se reinicia al cerrar el juego.
+static var cantidadBasura : int = 0
 var jugador_cerca : bool = false
 
 @onready var zona: Area2D = $ZonaInteraccion
@@ -18,4 +20,7 @@ func _on_body_exited(body: Node2D):
 
 func _process(_delta):
 	if jugador_cerca and Input.is_action_pressed("basura"):
+		cantidadBasura += 1
+		Eventos.basura_recogida.emit(cantidadBasura)
+		print("Basura recogida: ", cantidadBasura)
 		queue_free()

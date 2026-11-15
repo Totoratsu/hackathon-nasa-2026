@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://belhqcd41segt" path="res://escenas/ui_usuario.tscn" id="11_7oupo"]
 [ext_resource type="PackedScene" uid="uid://bys5oqsi316vy" path="res://escenas/Configuracion.tscn" id="12_w50ra"]
 [ext_resource type="PackedScene" uid="uid://lqi2irk5km8p" path="res://escenas/Misiones.tscn" id="13_58cm6"]
+[ext_resource type="PackedScene" uid="uid://dyrpolvmkvcnc" path="res://escenas/mesa_investigacion.tscn" id="14_mesa1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nf7ox"]
 texture = ExtResource("1_yrieu")
@@ -4482,3 +4483,6 @@ metadata/_tc_offline_added = true
 [node name="Area2D2" parent="." unique_id=781094645 instance=ExtResource("5_3gjn0")]
 position = Vector2(599, 64)
 escena = SubResource("PackedScene_piia2")
+
+[node name="mesa_investigacion" parent="." instance=ExtResource("14_mesa1")]
+position = Vector2(300, 250)
