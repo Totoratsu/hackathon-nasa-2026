@@ -12,7 +12,7 @@ const BASURA_MISION_1 := 5
 
 # Mismo orden que los dibujos de sprites clima.png: 0 = frio, 1 = normal, 2 = caliente
 enum Clima { FRIO, NORMAL, CALIENTE }
-const SEGUNDOS_CLIMA := 10.0
+const SEGUNDOS_CLIMA := 120.0  # el clima cambia cada 2 minutos
 const SIN_MEJORA := -1
 const PRECIO_MEJORA := 15       # 3 basuras vendidas
 const DURACION_MEJORA := 60.0   # segundos

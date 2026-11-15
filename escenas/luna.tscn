@@ -3725,10 +3725,6 @@ metadata/_tc_offline_added = true
 metadata/_tc_uuid = "9186316880875959484"
 
 [node name="Control" parent="Ui" unique_id=1894639479 instance=ExtResource("6_l2lj0")]
-offset_left = 848.0
-offset_top = 133.0
-offset_right = 1260.0
-offset_bottom = 171.0
 metadata/_tc_offline_added = true
 
 [node name="Configuracion" parent="Ui" unique_id=58801262 instance=ExtResource("9_cfg01")]
@@ -3736,10 +3732,15 @@ metadata/_tc_offline_added = true
 [node name="Misiones" parent="Ui" unique_id=771386252 instance=ExtResource("10_mis01")]
 
 [node name="Contador_basura" type="Label" parent="Ui" unique_id=2126024146]
-offset_left = 943.0
-offset_top = 24.0
-offset_right = 1004.0
-offset_bottom = 47.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -123.0
+offset_top = 56.0
+offset_right = -19.0
+offset_bottom = 102.0
+grow_horizontal = 0
+horizontal_alignment = 1
 theme_override_font_sizes/font_size = 36
 script = ExtResource("99_cont")
 metadata/_tc_offline_added = true
