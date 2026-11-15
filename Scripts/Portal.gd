@@ -21,12 +21,12 @@ func _on_body_entered(body: Node2D) -> void:
 
 	# Comprobar si el portal exige llevar el traje
 	if requiere_traje and body.get("traje") != true:
-		print("¡Necesitas el traje para entrar!")
+		Eventos.decir("¡Necesitas ponerte el traje para salir! Pulsa T.")
 		return
 
 	# El traje mejorado debe aguantar el clima actual
 	if revisar_clima and not Eventos.puede_salir():
-		print("Tu traje no aguanta este clima")
+		Eventos.decir(_mensaje_clima())
 		return
 
 	# Comprobar el destino
@@ -42,3 +42,13 @@ func _on_body_entered(body: Node2D) -> void:
 		"change_scene_to_file",
 		escena_destino
 	)
+
+
+# Dice que mejora hace falta segun el clima de afuera.
+func _mensaje_clima() -> String:
+	match Eventos.clima:
+		Eventos.Clima.FRIO:
+			return "Afuera hace demasiado frío. Necesitas la mejora al frío para el traje."
+		Eventos.Clima.CALIENTE:
+			return "Afuera hace demasiado calor. Necesitas la mejora al calor para el traje."
+	return "Tu traje no aguanta este clima."

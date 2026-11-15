@@ -47,4 +47,4 @@ func _process(_delta: float) -> void:
 		if Eventos.mesa_disponible:
 			panel.show()
 		else:
-			print("La mesa de investigacion aun no esta disponible")
+			Eventos.decir("La mesa de investigación aún no está disponible. Primero recolecta la basura espacial.")
