@@ -6,6 +6,12 @@ extends Node2D
 @export var intervalo := 2.0
 
 func _ready():
+	var jugador = get_tree().get_first_node_in_group("player")
+
+	if jugador != null:
+		jugador.activar_traje_obligatorio()
+	else:
+		print("ERROR: No se encontró al jugador en Luna")
 	var timer=Timer.new()
 	timer.wait_time = intervalo
 	timer.autostart = true

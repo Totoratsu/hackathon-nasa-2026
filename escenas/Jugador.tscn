@@ -308,6 +308,7 @@ metadata/_tc_uuid = "3794389184768591199"
 layer = 10
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1172959751]
+visible = false
 offset_left = 896.0
 offset_top = 68.0
 offset_right = 1144.0
