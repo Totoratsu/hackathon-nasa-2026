@@ -14,10 +14,10 @@ region = Rect2(78, 78, 125, 125)
 [node name="Control2" type="Control" unique_id=1894639479]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 224.0
-offset_top = 8.0
-offset_right = 524.0
-offset_bottom = 104.0
+offset_left = 8.0
+offset_top = 216.0
+offset_right = 308.0
+offset_bottom = 312.0
 mouse_filter = 2
 script = ExtResource("1_uiusr")
 metadata/_tc_uuid = "8291226749081620147"
