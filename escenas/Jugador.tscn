@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c60fjv3dps82m" path="res://Sprites/SPRITES astronauta-04.png" id="3_5bp30"]
 [ext_resource type="Texture2D" uid="uid://b2kic4mdyhdxj" path="res://Sprites/Barra de oxigeno.png" id="4_s1vfj"]
 [ext_resource type="Texture2D" uid="uid://fj3sqn4xk1jf" path="res://Sprites/relleno barra.png" id="5_eexci"]
+[ext_resource type="PackedScene" path="res://escenas/pantalla_clima.tscn" id="6_clima"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k55ed"]
 atlas = ExtResource("2_5bp30")
@@ -322,3 +323,6 @@ metadata/_edit_use_anchors_ = true
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2082787427]
 metadata/_tc_offline_added = true
 metadata/_tc_uuid = "3028788152317559082"
+
+[node name="PantallaClima" parent="." unique_id=913974382 instance=ExtResource("6_clima")]
+layer = 10
